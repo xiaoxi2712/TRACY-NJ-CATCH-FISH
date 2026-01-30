@@ -22,6 +22,7 @@ const rewardBox = document.getElementById("reward");
 const rewardImg = document.getElementById("rewardImg");
 const castSound = document.getElementById("soundCast");
 const winSound = document.getElementById("soundWin");
+const rewardSound = document.getElementById("soundReward");
 
 btn.onclick = () => {
   btn.disabled = true;
@@ -55,10 +56,15 @@ btn.onclick = () => {
         const reward = randomReward();
         rewardImg.src = reward.img;
         rewardBox.style.display = "block";
-
+     // Sound khi hiện thưởng
+        rewardSound.currentTime = 0;
+        rewardSound.play();
         if (reward.value === 2500) {
           winSound.currentTime = 0;
           winSound.play();
+          } else {
+            rewardSound.currentTime = 0;
+            rewardSound.play();
         }
 
         btn.disabled = false;
