@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#bgVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+#title {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #0a0606;
+}
+
+#title h1 {
+  font-size: 50px;
+}
+
+#title h2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+
+#net {
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -250px;
+  display: none;
+  pointer-events: none;
+}
+
+
+#reward {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-align: center;
+}
+
+#reward img {
+  width: 300px;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+#buttons {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;   /* đảm bảo nằm ngang */
+  align-items: center;
+  gap: 15px;
+}
+
+#btnCatch, #btnReplay {
+  padding: 15px 35px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnCatch {
+  background: gold;
+}
+
+#btnReplay {
+  background: #00e5ff;
+}
