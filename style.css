@@ -68,7 +68,7 @@ body {
 }
 
 #reward img {
-  width: 300px;
+  width: 500px;
   animation: pop 0.6s ease;
 }
 
@@ -103,3 +103,4 @@ body {
 #btnReplay {
   background: #00e5ff;
 }
+
